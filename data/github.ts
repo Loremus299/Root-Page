@@ -6,7 +6,7 @@ import { cache } from "react";
 interface GithubRepo {
   name: string;
   description: string;
-  topic: string;
+  topics: string[];
 }
 
 async function githubRepoFetch(): Promise<ResultType<GithubRepo[], string>> {

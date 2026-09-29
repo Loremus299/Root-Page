@@ -1,4 +1,5 @@
 import AnimatedText from "@/components/animatedText";
+import GithubDisplay from "@/components/github";
 import MaxWContainer from "@/components/maxWContainer";
 
 export default function Home() {
@@ -14,6 +15,7 @@ export default function Home() {
           here is where you can find everything I make.
         </p>
       </div>
+      <GithubDisplay />
     </MaxWContainer>
   );
 }

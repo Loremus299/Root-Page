@@ -1,7 +1,13 @@
 "use client";
 import { useEffect, useState } from "react";
 
-export default function AnimatedText({ text }: { text: string }) {
+export default function AnimatedText({
+  text,
+  className,
+}: {
+  text: string;
+  className?: string;
+}) {
   const [mouseOver, setMouseOver] = useState(false);
   const [activeIndex, setActiveIndex] = useState(0);
 
@@ -27,6 +33,7 @@ export default function AnimatedText({ text }: { text: string }) {
 
   return (
     <span
+      className={className}
       onMouseEnter={() => setMouseOver(true)}
       onMouseLeave={() => setMouseOver(false)}
     >
