@@ -1,13 +1,6 @@
 import githubData from "@/data/github";
 import AnimatedText from "./animatedText";
-import {
-  Card,
-  CardAction,
-  CardDescription,
-  CardHeader,
-  CardTitle,
-} from "./ui/card";
-import { ExternalLink } from "lucide-react";
+import { Card, CardDescription, CardHeader, CardTitle } from "./ui/card";
 
 export default async function GithubDisplay() {
   const data = await githubData();
@@ -18,6 +11,7 @@ export default async function GithubDisplay() {
 
   const web = [];
   const pico = [];
+  const misc = [];
 
   for (const repo of data.data) {
     if (repo.topics.includes("web")) {
@@ -26,9 +20,12 @@ export default async function GithubDisplay() {
     if (repo.topics.includes("pico-8")) {
       pico.push(repo);
     }
+    if (repo.topics.includes("misc")) {
+      misc.push(repo);
+    }
   }
 
-  const finalData = [web, pico];
+  const finalData = [web, pico, misc];
 
   return (
     <div id="github" className="grid gap-2">
@@ -37,27 +34,28 @@ export default async function GithubDisplay() {
         <div key={index} className="grid gap-1">
           <p className="text-md tracking-tight">
             {(index === 0 && "Web stuff ;3") ||
-              (index === 1 && "Pico8 Games ;3")}
+              (index === 1 && "Pico8 Games ;3") ||
+              (index === 2 && "Miscellaneous ;3")}
           </p>
           <div className="grid grid-cols-2 gap-2 portrait:grid-cols-1">
             {item.map((repo) => (
-              <Card key={repo.name}>
+              <Card
+                key={repo.name}
+                className="hover:rotate-3 hover:scale-110 hover:drop-shadow-2xl duration-300 transition-all"
+              >
                 <CardHeader>
                   <CardTitle>
-                    <AnimatedText
-                      text={repo.name.replaceAll("-", " ")}
-                      className="font-medium"
-                    />
-                  </CardTitle>
-                  <CardDescription>{repo.description}</CardDescription>
-                  <CardAction>
                     <a
                       target="_blank"
                       href={`https://github.com/Loremus299/${repo.name}`}
                     >
-                      <ExternalLink className="size-4" />
+                      <AnimatedText
+                        text={repo.name.replaceAll("-", " ")}
+                        className="font-medium"
+                      />
                     </a>
-                  </CardAction>
+                  </CardTitle>
+                  <CardDescription>{repo.description}</CardDescription>
                 </CardHeader>
               </Card>
             ))}

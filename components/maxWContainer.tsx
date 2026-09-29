@@ -1,7 +1,7 @@
 "use client";
 import { cn } from "cn";
 import { useEffect, useState } from "react";
-import { Menu } from "lucide-react";
+import { GitGraph, Menu } from "lucide-react";
 
 export default function MaxWContainer({
   children,
@@ -25,10 +25,10 @@ export default function MaxWContainer({
 
   return (
     <div className="w-full min-h-screen flex justify-center">
-      <div className="max-w-xl flex">
+      <div className="max-w-2xl flex">
         <div
           className={cn(
-            "min-h-screen hover:w-1/3 w-8 transition-all duration-300 bg-primary/10 border border-dashed text-xs",
+            "sticky h-dvh top-0 hover:w-1/3 w-8 transition-all duration-300 bg-primary/10 border border-dashed text-xs",
           )}
           onMouseEnter={() => setMouseOver(true)}
           onMouseLeave={() => {
@@ -43,13 +43,19 @@ export default function MaxWContainer({
             </div>
           </div>
           <div className="w-full border-t border-dashed" />
+          <div className="p-2">
+            <a className="flex gap-2 items-center" href="#github">
+              <GitGraph className="size-4" />
+              {showUI && "Github."}
+            </a>
+          </div>
         </div>
         <div
           className={cn(
             "w-full p-4 border-r border-dashed min-h-screen transition-all duration-300",
           )}
         >
-          <main>{children}</main>
+          <main className="grid gap-8">{children}</main>
         </div>
       </div>
     </div>
