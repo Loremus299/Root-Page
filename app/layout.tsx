@@ -31,6 +31,7 @@ export default function RootLayout({
     <html lang="en">
       <body
         className={`${fontSans.variable} ${fontSerif.variable} ${fontMono.variable} antialiased`}
+        style={{ cursor: "url('/cursor.png') 16 16, auto" }}
       >
         {children}
       </body>
