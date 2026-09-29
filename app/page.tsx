@@ -1,5 +1,5 @@
-import AnimatedText from "@/components/ui/animatedText";
-import MaxWContainer from "@/components/ui/maxWContainer";
+import AnimatedText from "@/components/animatedText";
+import MaxWContainer from "@/components/maxWContainer";
 
 export default function Home() {
   return (
@@ -9,10 +9,10 @@ export default function Home() {
           <AnimatedText text="My Space" /> on the internet.
         </p>
         <p className="text-muted-foreground text-sm">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam
-          labore quod in quia laudantium minima vitae. Fugiat, labore accusamus
-          dolorem eos sequi recusandae? Temporibus, delectus iure veniam
-          quisquam vitae amet.
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum harum
+          sit repudiandae hic ut ab eius qui earum deleniti accusamus sequi
+          incidunt, reiciendis eligendi id eveniet deserunt, eaque laudantium
+          ipsam!
         </p>
       </div>
     </MaxWContainer>
