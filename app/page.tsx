@@ -9,10 +9,9 @@ export default function Home() {
           <AnimatedText text="My Space" /> on the internet.
         </p>
         <p className="text-muted-foreground text-sm">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum harum
-          sit repudiandae hic ut ab eius qui earum deleniti accusamus sequi
-          incidunt, reiciendis eligendi id eveniet deserunt, eaque laudantium
-          ipsam!
+          This is my little space on the big big internet :3 I like making video
+          games and websites, apps, anything pretty frontend UI and art. And
+          here is where you can find everything I make.
         </p>
       </div>
     </MaxWContainer>
