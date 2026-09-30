@@ -20,8 +20,8 @@ async function subdomainDataFetch(): Promise<ResultType<string[], string>> {
           signal: AbortSignal.timeout(2000),
         });
         validDomains.push(domain.split(".loremus.gay")[0]);
-      } catch (error) {
-        console.log(error, domain);
+      } catch {
+        //
       }
     }
 

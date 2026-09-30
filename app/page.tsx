@@ -1,4 +1,5 @@
 import AnimatedText from "@/components/animatedText";
+import GameDisplay from "@/components/gameDisplay";
 import GithubDisplay from "@/components/github";
 import MaxWContainer from "@/components/maxWContainer";
 import SitesDisplay from "@/components/sites";
@@ -18,6 +19,7 @@ export default function Home() {
           ദ്ദി(˵ •̀ ᴗ - ˵ ) ✧
         </p>
       </div>
+      <GameDisplay />
       <SitesDisplay />
       <SocialsDisplay />
       <GithubDisplay />
