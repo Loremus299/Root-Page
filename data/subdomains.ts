@@ -10,7 +10,9 @@ async function subdomainDataFetch(): Promise<ResultType<string[], string>> {
 
   if (req.status == 200) {
     const res: string = await req.text();
-    const domains = res.split("\n").filter((item) => item.length > 0);
+    const domains = res
+      .split("\n")
+      .filter((item) => item.length > 0 && item != "loremus.gay");
     const validDomains = [];
 
     for (const domain of domains) {
