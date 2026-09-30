@@ -33,9 +33,9 @@ export default async function GithubDisplay() {
       {finalData.map((item, index) => (
         <div key={index} className="grid gap-1">
           <p className="text-md tracking-tight">
-            {(index === 0 && "Web stuff ;3") ||
-              (index === 1 && "Pico8 Games ;3") ||
-              (index === 2 && "Miscellaneous ;3")}
+            {(index === 0 && "Web Development ✩₊˚.⋆🕸️⋆⁺₊✧") ||
+              (index === 1 && "Pico8 Games ⋆˚✰ ݁˖⭑.ᐟ") ||
+              (index === 2 && "Miscellaneous ⋆✴︎˚｡⋆")}
           </p>
           <div className="grid grid-cols-2 gap-2 portrait:grid-cols-1">
             {item.map((repo) => (
