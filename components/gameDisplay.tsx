@@ -22,7 +22,7 @@ export default async function GameDisplay() {
                 <img
                   src={game.cover_url}
                   alt={game.title}
-                  className="rounded-xl border mb-2"
+                  className="rounded-xl border mb-2 hover:grayscale duration-300 transition-all"
                 />
                 <div className="flex justify-between items-center">
                   <AnimatedText
