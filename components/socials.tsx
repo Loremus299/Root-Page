@@ -5,7 +5,7 @@ export default function SocialsDisplay() {
   return (
     <div className="grid gap-2" id="socials">
       <h3 className="text-md tracking-tight font-medium">Socials.</h3>
-      <div className="grid grid-cols-8 gap-2 portrait:grid-cols-4">
+      <div className="grid grid-cols-10 gap-2 portrait:grid-cols-5">
         {data.map((item) => (
           <div
             key={item.icon}
@@ -17,7 +17,7 @@ export default function SocialsDisplay() {
                 alt={item.name}
                 width={400}
                 height={400}
-                className="h-full rounded-xl"
+                className="h-full rounded-xl hover:rotate-3 hover:scale-105 hover:drop-shadow-md/50 duration-300 transition-all"
               />
             </a>
           </div>
