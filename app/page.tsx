@@ -1,6 +1,7 @@
 import AnimatedText from "@/components/animatedText";
 import GithubDisplay from "@/components/github";
 import MaxWContainer from "@/components/maxWContainer";
+import SitesDisplay from "@/components/sites";
 import SocialsDisplay from "@/components/socials";
 
 export default function Home() {
@@ -13,9 +14,11 @@ export default function Home() {
         <p className="text-muted-foreground text-sm">
           This is my little space on the big big internet :3 I like making video
           games and websites, apps, anything pretty frontend UI and art. And
-          here is where you can find everything I make.
+          here is where you can find everything I make. <br />
+          ദ്ദി(˵ •̀ ᴗ - ˵ ) ✧
         </p>
       </div>
+      <SitesDisplay />
       <SocialsDisplay />
       <GithubDisplay />
     </MaxWContainer>

@@ -1,4 +1,4 @@
-"use server";
+import "server-only";
 
 import { Result, ResultType } from "@/lib/result";
 import { cache } from "react";
