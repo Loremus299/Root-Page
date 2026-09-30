@@ -1,7 +1,7 @@
 "use client";
 import { cn } from "cn";
 import { useEffect, useState } from "react";
-import { GitGraph, HomeIcon, Menu } from "lucide-react";
+import { GitGraph, HomeIcon, Menu, SendIcon } from "lucide-react";
 
 export default function MaxWContainer({
   children,
@@ -47,6 +47,15 @@ export default function MaxWContainer({
             <a className="flex gap-2 items-center hover:underline" href="">
               <HomeIcon className="size-4" />
               {showUI && "Home."}
+            </a>
+          </div>
+          <div className="p-2">
+            <a
+              className="flex gap-2 items-center hover:underline"
+              href="#socials"
+            >
+              <SendIcon className="size-4" />
+              {showUI && "Socials."}
             </a>
           </div>
           <div className="p-2">

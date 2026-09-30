@@ -1,0 +1,23 @@
+[
+  {
+    "name": "Mastodon",
+    "url": "https://tech.lgbt/@loremus",
+    "icon": "tech.ico",
+    "row": "",
+    "col": ""
+  },
+  {
+    "name": "Itch.io",
+    "url": "https://loremus.itch.io/",
+    "icon": "itch.png",
+    "row": "",
+    "col": ""
+  },
+  {
+    "name": "Twitter",
+    "url": "https://x.com/Loremus",
+    "icon": "twitter.webp",
+    "row": "",
+    "col": ""
+  }
+]

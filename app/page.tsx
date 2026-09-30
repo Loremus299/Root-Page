@@ -1,6 +1,7 @@
 import AnimatedText from "@/components/animatedText";
 import GithubDisplay from "@/components/github";
 import MaxWContainer from "@/components/maxWContainer";
+import SocialsDisplay from "@/components/socials";
 
 export default function Home() {
   return (
@@ -15,6 +16,7 @@ export default function Home() {
           here is where you can find everything I make.
         </p>
       </div>
+      <SocialsDisplay />
       <GithubDisplay />
     </MaxWContainer>
   );
