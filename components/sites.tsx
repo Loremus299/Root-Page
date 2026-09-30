@@ -9,7 +9,9 @@ export default async function SitesDisplay() {
   }
   return (
     <div className="grid gap-2" id="websites">
-      <h3 className="text-md tracking-tight font-medium">My Websites.</h3>
+      <h3 className="text-md tracking-tight font-medium">
+        ˖ . ݁𝜗𝜚. ݁₊ My Websites. ˖ . ݁𝜗𝜚. ݁₊
+      </h3>
       <div className="grid gap-2 grid-cols-2 portrait:grid-cols-1">
         {data.data.map((domain) => (
           <a

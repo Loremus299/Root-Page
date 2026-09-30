@@ -29,7 +29,9 @@ export default async function GithubDisplay() {
 
   return (
     <div id="github" className="grid gap-2">
-      <h3 className="text-md tracking-tight font-medium">Github.</h3>
+      <h3 className="text-md tracking-tight font-medium">
+        ˖ . ݁𝜗𝜚. ݁₊ Github. ˖ . ݁𝜗𝜚. ݁₊
+      </h3>
       {finalData.map((item, index) => (
         <div key={index} className="grid gap-1">
           <p className="text-md tracking-tight">

@@ -8,9 +8,9 @@ import SocialsDisplay from "@/components/socials";
 export default function Home() {
   return (
     <MaxWContainer>
-      <div className="grid gap-2">
+      <div className="grid gap-2 font-medium">
         <p className="text-xl tracking-tighter">
-          <AnimatedText text="My Space" /> on the internet.
+          <AnimatedText text="My Space" /> on the internet. ݁ ˖Ი𐑼⋆
         </p>
         <p className="text-muted-foreground text-sm">
           This is my little space on the big big internet :3 I like making video
