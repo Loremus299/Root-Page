@@ -21,6 +21,7 @@ const fontMono = JetBrains_Mono({
 const embed = "/embed.png";
 
 export const metadata: Metadata = {
+  metadataBase: "https://loremus.gay",
   title: "Loremus",
   description: "My little space on the internet",
   openGraph: {
