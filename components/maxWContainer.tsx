@@ -20,7 +20,7 @@ export default function MaxWContainer({
 
   useEffect(() => {
     const timer = setTimeout(() => {
-      if (mouseOver) {
+      if (mouseOver && window.matchMedia("(orientation: landscape)").matches) {
         setShowUI(true);
       }
     }, 300);
