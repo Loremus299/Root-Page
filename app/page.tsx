@@ -2,6 +2,7 @@ import AnimatedText from "@/components/animatedText";
 import GameDisplay from "@/components/gameDisplay";
 import GithubDisplay from "@/components/github";
 import MaxWContainer from "@/components/maxWContainer";
+import Monster from "@/components/monster";
 import SitesDisplay from "@/components/sites";
 import SocialsDisplay from "@/components/socials";
 
@@ -23,6 +24,7 @@ export default function Home() {
       <SitesDisplay />
       <SocialsDisplay />
       <GithubDisplay />
+      <Monster />
     </MaxWContainer>
   );
 }

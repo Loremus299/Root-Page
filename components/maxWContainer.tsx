@@ -2,12 +2,13 @@
 import { cn } from "cn";
 import { useEffect, useState } from "react";
 import {
+  FolderIcon,
   Gamepad,
   GitGraph,
   Globe,
   HomeIcon,
-  Menu,
   SendIcon,
+  ZapIcon,
 } from "lucide-react";
 
 export default function MaxWContainer({
@@ -44,17 +45,15 @@ export default function MaxWContainer({
           }}
         >
           <div className="p-2">
-            <div className="flex gap-2 items-center">
-              <Menu className="size-4" />
-              {showUI && "Navbar."}
-            </div>
-          </div>
-          <div className="w-full border-t border-dashed" />
-          <div className="p-2">
             <a className="flex gap-2 items-center hover:underline" href="">
               <HomeIcon className="size-4" />
               {showUI && "Home."}
             </a>
+          </div>
+          <div className="w-full border-t border-dashed" />
+          <div className="p-2 flex gap-2">
+            <FolderIcon className="size-4 text-primary/50" />
+            {showUI && "My stuff."}
           </div>
           <div className="p-2">
             <a
@@ -74,13 +73,18 @@ export default function MaxWContainer({
               {showUI && "My Websites."}
             </a>
           </div>
+          <div className="w-full border-t border-dashed" />
+          <div className="p-2 flex gap-2">
+            <FolderIcon className="size-4 text-primary/50" />
+            {showUI && "Socials"}
+          </div>
           <div className="p-2">
             <a
               className="flex gap-2 items-center hover:underline"
               href="#socials"
             >
               <SendIcon className="size-4" />
-              {showUI && "Socials."}
+              {showUI && "Links."}
             </a>
           </div>
           <div className="p-2">
@@ -89,7 +93,21 @@ export default function MaxWContainer({
               href="#github"
             >
               <GitGraph className="size-4" />
-              {showUI && "Github."}
+              {showUI && "Github Repos."}
+            </a>
+          </div>
+          <div className="w-full border-t border-dashed" />
+          <div className="p-2 flex gap-2">
+            <FolderIcon className="size-4 text-primary/50" />
+            {showUI && "Stupid things"}
+          </div>
+          <div className="p-2">
+            <a
+              className="flex gap-2 items-center hover:underline"
+              href="#monster"
+            >
+              <ZapIcon className="size-4" />
+              {showUI && "Monster Energy - flavors ranked."}
             </a>
           </div>
         </div>
