@@ -1,4 +1,5 @@
 import AnimatedText from "@/components/animatedText";
+import ArtDisplay from "@/components/bsky";
 import GameDisplay from "@/components/gameDisplay";
 import GithubDisplay from "@/components/github";
 import MaxWContainer from "@/components/maxWContainer";
@@ -21,6 +22,7 @@ export default function Home() {
         </p>
       </div>
       <GameDisplay />
+      <ArtDisplay />
       <SitesDisplay />
       <SocialsDisplay />
       <GithubDisplay />
