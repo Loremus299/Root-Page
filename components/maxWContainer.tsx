@@ -7,6 +7,7 @@ import {
   GitGraph,
   Globe,
   HomeIcon,
+  PencilSparkles,
   SendIcon,
   ZapIcon,
 } from "lucide-react";
@@ -50,6 +51,15 @@ export default function MaxWContainer({
               {showUI && "Home."}
             </a>
           </div>
+          <div className="p-2">
+            <a
+              className="flex gap-2 items-center hover:underline"
+              href="#socials"
+            >
+              <SendIcon className="size-4" />
+              {showUI && "Links."}
+            </a>
+          </div>
           <div className="w-full border-t border-dashed" />
           <div className="p-2 flex gap-2">
             <FolderIcon className="size-4 text-primary/50" />
@@ -65,6 +75,12 @@ export default function MaxWContainer({
             </a>
           </div>
           <div className="p-2">
+            <a className="flex gap-2 items-center hover:underline" href="#bsky">
+              <PencilSparkles className="size-4" />
+              {showUI && "My Art."}
+            </a>
+          </div>
+          <div className="p-2">
             <a
               className="flex gap-2 items-center hover:underline"
               href="#websites"
@@ -73,27 +89,13 @@ export default function MaxWContainer({
               {showUI && "My Websites."}
             </a>
           </div>
-          <div className="w-full border-t border-dashed" />
-          <div className="p-2 flex gap-2">
-            <FolderIcon className="size-4 text-primary/50" />
-            {showUI && "Socials"}
-          </div>
-          <div className="p-2">
-            <a
-              className="flex gap-2 items-center hover:underline"
-              href="#socials"
-            >
-              <SendIcon className="size-4" />
-              {showUI && "Links."}
-            </a>
-          </div>
           <div className="p-2">
             <a
               className="flex gap-2 items-center hover:underline"
               href="#github"
             >
               <GitGraph className="size-4" />
-              {showUI && "Github Repos."}
+              {showUI && "Github."}
             </a>
           </div>
           <div className="w-full border-t border-dashed" />

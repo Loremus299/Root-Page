@@ -21,10 +21,10 @@ export default function Home() {
           ദ്ദി(˵ •̀ ᴗ - ˵ ) ✧
         </p>
       </div>
+      <SocialsDisplay />
       <GameDisplay />
       <ArtDisplay />
       <SitesDisplay />
-      <SocialsDisplay />
       <GithubDisplay />
       <Monster />
     </MaxWContainer>
