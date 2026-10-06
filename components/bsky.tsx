@@ -1,12 +1,5 @@
 /* eslint-disable @next/next/no-img-element */
 import bskyData from "@/data/bsky";
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
-} from "./ui/carousel";
 
 export default async function ArtDisplay() {
   const data = await bskyData();
@@ -15,51 +8,94 @@ export default async function ArtDisplay() {
     return <div id="github">BSKY GAVE AN ERROR OH MY GOD</div>;
   }
 
+  const inktober: string[] = [];
+  const doodles: string[] = [];
+  const matching: string[] = [];
+  const art: string[] = [];
+
+  for (const post of data.data) {
+    let matched = false;
+    if (
+      post.post.record.facets?.some((f) =>
+        f.features.some((feat) => feat.tag === "doodle"),
+      )
+    ) {
+      post.post.embed?.images?.forEach((img) => doodles.push(img.fullsize));
+      matched = true;
+    }
+
+    if (
+      post.post.record.facets?.some((f) =>
+        f.features.some((feat) => feat.tag === "inktober"),
+      )
+    ) {
+      post.post.embed?.images?.forEach((img) => inktober.push(img.fullsize));
+      matched = true;
+    }
+
+    if (
+      post.post.record.facets?.some((f) =>
+        f.features.some((feat) => feat.tag === "matching"),
+      )
+    ) {
+      post.post.embed?.images?.forEach((img) => matching.push(img.fullsize));
+      matched = true;
+    }
+
+    if (!matched) {
+      post.post.embed?.images?.forEach((img) => art.push(img.fullsize));
+    }
+  }
+
   return (
     <div id="bsky" className="grid gap-2">
       <h3 className="text-md tracking-tight font-medium">
         ˖ . ݁𝜗𝜚. ݁₊ My Art. ˖ . ݁𝜗𝜚. ݁₊
       </h3>
-      <div className="grid grid-cols-2 portrait:grid-cols-1 gap-2">
-        {data.data.map((item, index) => (
-          <div
-            key={index}
-            className="p-4 bg-card border rounded-2xl grid gap-2"
-          >
-            <Carousel>
-              <CarouselContent>
-                {item.post.embed!.images?.map((image) => (
-                  <CarouselItem key={image.thumb}>
-                    <img
-                      src={image.fullsize}
-                      alt={image.thumb}
-                      className="rounded-2xl border border-dashed"
-                    />
-                  </CarouselItem>
-                ))}
-              </CarouselContent>
-              {item.post.embed!.images?.length != 1 && (
-                <>
-                  <CarouselPrevious className={"absolute left-2"} />
-                  <CarouselNext className={"absolute right-2"} />
-                </>
-              )}
-            </Carousel>
-            <div className="flex gap-2">
-              {item.post.record.facets
-                ?.flatMap((item) =>
-                  item.features.filter(
-                    (feature) => feature.$type == "app.bsky.richtext.facet#tag",
-                  ),
-                )
-                .map((tag, index) => (
-                  <h4 key={index} className="text-sm">
-                    {"#" + tag.tag!}
-                  </h4>
-                ))}
-            </div>
-          </div>
-        ))}
+      <div className="grid gap-2">
+        <div className="grid grid-cols-2 gap-2 portrait:grid-cols-1">
+          {art.map((url) => (
+            <img
+              src={url}
+              alt={url}
+              key={url}
+              className="border rounded-xl p-1 w-full"
+            />
+          ))}
+        </div>
+        <h4>✮ ⋆ ˚｡𖦹 ⋆｡°✩ Matching pfps ✮ ⋆ ˚｡𖦹 ⋆｡°✩</h4>
+        <div className="grid grid-cols-2 gap-2 portrait:grid-cols-1">
+          {matching.map((url) => (
+            <img
+              src={url}
+              alt={url}
+              key={url}
+              className="border rounded-xl p-1 w-full"
+            />
+          ))}
+        </div>
+        <h4>✮ ⋆ ˚｡𖦹 ⋆｡°✩ Doodles ✮ ⋆ ˚｡𖦹 ⋆｡°✩</h4>
+        <div className="grid grid-cols-2 gap-2 portrait:grid-cols-1">
+          {doodles.map((url) => (
+            <img
+              src={url}
+              alt={url}
+              key={url}
+              className="border rounded-xl p-1 w-full"
+            />
+          ))}
+        </div>
+        <h4>✮ ⋆ ˚｡𖦹 ⋆｡°✩ Inktober ✮ ⋆ ˚｡𖦹 ⋆｡°✩</h4>
+        <div className="grid grid-cols-2 gap-2 portrait:grid-cols-1">
+          {inktober.map((url) => (
+            <img
+              src={url}
+              alt={url}
+              key={url}
+              className="border rounded-xl p-1 w-full"
+            />
+          ))}
+        </div>
       </div>
     </div>
   );
